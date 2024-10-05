@@ -1,0 +1,116 @@
+/* Logo image in the navbar */
+.navbar-brand img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Font-face (currently unused, add the correct URL for the font) */
+@font-face {
+    font-family: "Averta";
+    src: url('path-to-your-font-file.averta'); /* Add the correct path for the font file */
+}
+
+/* Global font settings */
+* {
+    font-family: "Averta", sans-serif; /* Added fallback font in case Averta is unavailable */
+}
+
+/* Hero section takes up full viewport height */
+.hero {
+    height: 100vh;
+}
+
+/* Navbar link styles */
+.navbar .navbar-nav .nav-item:nth-child(1) .nav-link {
+    color: #a5410f;
+    font-weight: 700;
+}
+
+/* Margin between navbar items */
+.navbar .navbar-nav .nav-item {
+    margin: 24px;
+}
+
+/* Hero section styles */
+.hero-section {
+    align-items: center;
+    height: 100%;
+    display: flex; /* Added flex for centering elements vertically */
+}
+
+/* Heading inside hero section */
+.hero-section h1 {
+    font-weight: bold;
+    font-size: 65px;
+    color: #506269;
+}
+
+.hero-section img{
+    max-width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.hero-section button{
+    height: 65px;
+    border-radius: 0px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: yellow;
+}
+
+.hero-section button:hover {
+    background-color: white;
+    border: 2px solid #a5410f;
+    color: #a5410f;
+}
+
+/* About us section */
+.about {
+    margin: 100px 0px;
+}
+
+.about .row {
+    align-items: center; /* Vertically center the items */
+}
+
+.about .first-col img {
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about .second-col {
+    padding-left: 30px; /* Add space between image and text */
+}
+
+/* Paragraph styling */
+.about .second-col p {
+    font-size: 18px; /* Size for paragraph text */
+    line-height: 1.8; /* Space between lines */
+    color: #333; /* Dark color for readability */
+    margin-bottom: 20px; /* Add space below each paragraph */
+}
+
+/* Bold styling for section titles within paragraphs */
+.about .second-col p:first-child {
+    font-weight: bold;
+    font-size: 24px; /* Larger size for section titles */
+    color: #a5410f; /* Accent color */
+    margin-bottom: 15px; /* Add space below titles */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .about .first-col,
+    .about .second-col {
+        text-align: center;
+        padding: 0; /* Remove padding for smaller screens */
+    }
+
+    .about .first-col img {
+        max-width: 100%; /* Ensure image takes full width */
+    }
+}

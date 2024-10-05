@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        .navbar-brand img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Global font settings */
+* {
+    font-family: "Averta", sans-serif;
+}
+
+/* Hero section takes up full viewport height */
+.hero {
+    height: 100vh;
+}
+
+/* Navbar link styles */
+.navbar .navbar-nav .nav-item:nth-child(1) .nav-link {
+    font-weight: 700;
+}
+
+/* Margin between navbar items */
+.navbar .navbar-nav .nav-item {
+    margin: 24px;
+}
+
+/* Updated Hero section styles with new class */
+.hero {
+    align-items: center;
+    height: 100%;
+    display: flex; /* Added flex for centering elements vertically */
+    text-align: center; /* Center the heading */
+    margin: 50px 0;
+}
+
+/* Adjusting the size of the image in the hero section */
+.hero img {
+    max-width: 100%;
+    height: 70vh; /* Adjust the height as needed (70% of the viewport height) */
+    object-fit: cover; /* Ensures the image covers the height while maintaining aspect ratio */
+}
+
+/* Heading inside hero section */
+.hero h1 {
+    font-weight: bold;
+    font-size: 65px;
+    color: #506269;
+}
+
+.hero button {
+    height: 65px;
+    border-radius: 0px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: red;
+}
+
+.hero button:hover {
+    background-color: white;
+    border: 2px solid #a5410f;
+    color: #a5410f;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center; /* Centered heading */
+}
+
+.main-hero p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-align: center; /* Justified paragraph text */
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.project-gallery img {
+    width: 100%; /* Make images responsive */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover animation effect on image */
+.project-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Hidden text initially */
+.project-gallery p {
+    display: none; /* Hide the description initially */
+    font-size: 16px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the text when image is clicked */
+.project-gallery img.active + p {
+    display: block; /* Show the text */
+}
+
+/* Footer styling */
+footer {
+    background-color: #4d4d4d; /* Dark gray background */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+
+
+
+    </style>
+
+    <script>
+        // jQuery to toggle active class when the image is clicked
+        $(document).ready(function(){
+            $('.project-gallery img').on('click', function() {
+                $(this).toggleClass('active'); // Toggle the active class
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.jpeg" alt="Brand Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Our Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="what'snew.html">What's New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="main-hero">
+            <h1>Our Projects</h1>
+            <p>Explore our diverse range of projects that showcase our creativity, innovation, and dedication to excellence.</p>
+        </div>
+
+        <!-- Project Gallery -->
+        <div class="project-gallery">
+            <div>
+                <img src="assets/images/project1.png" alt="Project 1">
+                <p>We craft brand strategies that define who you are and
+                     where you're going. From logo design to complete brand 
+                     identity systems, we create cohesive visuals and messaging
+                      that resonate with your target audience.</p>
+            </div>
+            <div>
+                <img src="assets/images/project2.jfif" alt="Project 2">
+                <p>Our design team blends creativity with functionality, 
+                    developing visuals that not only look stunning but also 
+                    serve your brand's goals. From digital to print, we create 
+                    designs that make a lasting impression.</p>
+            </div>
+            <div>
+                <img src="assets/images/project3.jfif" alt="Project 3">
+                <p>In the digital age, your online presenceis everything. 
+                    We leverage cutting-edge marketing strategies and 
+                    data-driven insightsto grow your brand's onlinefootprint
+                     and drive meaningful engagement.</p>
+            </div>
+            <div>
+                <img src="assets/images/project4.jfif" alt="Project 4">
+                <p>Ensuring your message is delivered through the right 
+                    channels at the right time to maximize impact.</p>
+            </div>
+            <div>
+                <img src="assets/images/project5.jfif" alt="Project 5">
+                <p>We build and manage your brand's reputation, connecting
+                     you with key mediaand influencers to amplify your message.
+                      Our PR strategies are designed to position you as a leader in your industry.</p>
+            </div>
+            <div>
+                <img src="assets/images/project6.jfif" alt="Project 6">
+                <p>Creating memorable events that engage your audience and leave a lasting impression.</p>
+            </div>
+            <div>
+                <img src="assets/images/project7.jfif" alt="Project 7">
+                <p>Providing insights and analysis to inform your marketing strategy and drive decision-making.</p>
+            </div>
+            <div>
+                <img src="assets/images/project8.jfif" alt="Project 8">
+                <p>Delivering high-quality print materials that enhance your brand's presence and ensure consistency 
+                    across all physical marketing channels.</p>
+            </div>
+        </div>
+
+        
+<!-- Footer -->
+<div class="footer-content">
+    <div class="footer-section">
+        <h3>BRAND SPEAK</h3>
+        <p>360-degree advertising agency dedicated to delivering innovative and effective marketing solutions.</p>
+    </div>
+    <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Vacancy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Clients</h3>
+        <ul>
+            <li><a href="#">Terms of Services</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Case stories</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Latest news</a></li>
+        </ul>
+    </div>
+</div>
+<div class="social-media">
+    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+</div>
+
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
